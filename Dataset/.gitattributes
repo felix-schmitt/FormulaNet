@@ -1,0 +1,2 @@
+train/train_coco.json filter=lfs diff=lfs merge=lfs -text
+test/test_coco.json filter=lfs diff=lfs merge=lfs -text

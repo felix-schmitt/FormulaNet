@@ -1,0 +1,11 @@
+pathlib
+tarfile
+numpy
+shutil
+tqdm
+arxiv
+pdf2image
+opencv-python
+time
+regex
+json
