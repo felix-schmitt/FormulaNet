@@ -63,6 +63,21 @@ This work is licensed under a
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 ## Citation
 
-FormulaNet: A Benchmark Dataset for Mathematical Formula Detection
+### FormulaNet: A Benchmark Dataset for Mathematical Formula Detection
 
-Felix Schmitt-Koopmann, Elaine Huang, Hans-Peter Hutter, Thilo Stadelmann, Alireza Darvishy
+Felix M. Schmitt-Koopmann, Elaine M. Huang, Hans-Peter Hutter, Thilo Stadelmann, Alireza Darvishy
+
+[https://ieeexplore.ieee.org/document/9869643](https://ieeexplore.ieee.org/document/9869643)
+
+```
+@ARTICLE{9869643,
+    author={Schmitt-Koopmann, Felix M. and Huang, Elaine M. and Hutter, Hans-Peter and 
+    Stadelmann, Thilo and Darvishy, Alireza},  
+    journal={IEEE Access},   
+    title={FormulaNet: A Benchmark Dataset for Mathematical Formula Detection},   
+    year={2022},  
+    volume={10},  
+    number={},  
+    pages={91588-91596},  
+    doi={10.1109/ACCESS.2022.3202639}}
+```
