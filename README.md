@@ -24,7 +24,7 @@ copyrights reasons, we can only provide the [list](urls.txt) of papers, which mu
 ## Get FormulaNet
 **Prerequisites**
 * Linux or macOS is recommended
-* A LaTeX installation is required
+* A LaTeX installation with texlive-full is required
 * Clone the repository
 ```shell
     git clone ...
@@ -35,7 +35,7 @@ copyrights reasons, we can only provide the [list](urls.txt) of papers, which mu
 ```
 **Install the python environment (recommended Python 3.8)**
 ```shell
-    pip install requirements.txt 
+    pip install -r requirements.txt 
 ```
 **run the script**
 ```shell
