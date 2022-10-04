@@ -27,7 +27,7 @@ copyrights reasons, we can only provide the [list](urls.txt) of papers, which mu
 * A LaTeX installation with texlive-full is required
 * Clone the repository
 ```shell
-    git clone ...
+    git clone https://github.com/felix-schmitt/FormulaNet.git
 ```
 * Pull the git lfs
 ```shell
