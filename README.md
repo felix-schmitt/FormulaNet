@@ -23,16 +23,29 @@ copyrights reasons, we can only provide the [list](urls.txt) of papers, which mu
 
 ## Get FormulaNet
 **Prerequisites**
-* Linux or macOS is recommended
-* A LaTeX installation with texlive-full is required
+* Ubuntu 20.04.5 LTS is recommended
+* A LaTeX installation with texlive-full (2019 is recommended) is required
 * Clone the repository
 ```shell
     git clone https://github.com/felix-schmitt/FormulaNet.git
 ```
-* Pull the git lfs
+* Get the annotation files with git lfs or [Dropbox](https://www.dropbox.com/sh/9yjb1lkv9dnmdev/AABBH7QFVA888scAu4Rgj1sja?dl=0)
 ```shell
     git lfs pull
 ```
+The file structure should look like this:
+
+    .
+    ├── ...
+    ├── Dataset
+    │   ├── train
+    │   │     ├── img   # empty folder
+    │   │     └── train_coco.json
+    │   └── test
+    │         ├── img   # empty folder
+    │         └── train_coco.json
+    └── ...
+
 **Install the python environment (recommended Python 3.8)**
 ```shell
     pip install -r requirements.txt 
@@ -45,10 +58,10 @@ copyrights reasons, we can only provide the [list](urls.txt) of papers, which mu
 
 ## Baseline Model
 
-Model | mAP        | mAP@50     | mAP@75     | mAP@inline | mAP@display
----|------------|------------|------------|------------|--- 
-FCOS-50 | 0.754±0.03 | 0.921±0.02 | 0.84±0.02  | 0.752±0.02 | 0.755±0.02
-FCOS-101 | 0.755±0.03 | 0.920±0.02 | 0.841±0.02 | 0.756±0.02 | 0.749±0.03
+| Model    | mAP        | mAP@50     | mAP@75     | mAP@inline | mAP@display |
+|----------|------------|------------|------------|------------|-------------|
+| FCOS-50  | 0.754±0.03 | 0.921±0.02 | 0.84±0.02  | 0.752±0.02 | 0.755±0.02  |
+| FCOS-101 | 0.755±0.03 | 0.920±0.02 | 0.841±0.02 | 0.756±0.02 | 0.749±0.03  |
 
 The results can be reproduced by using these config files ([FCOS-50](Baseline/FCOS-50.py), [FCOS-101](Baseline/FCOS-101.py)) and the github repo [Yuxiang1995/ICDAR2021_MFD](https://github.com/Yuxiang1995/ICDAR2021_MFD).
 
