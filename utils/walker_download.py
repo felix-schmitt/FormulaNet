@@ -347,7 +347,7 @@ def color_with_regex(main_tex: Path, config):
     return 'done'
 
 
-def compile_pdf(source_dir: Path):
+def compile_pdf(source_dir, waiting_time):
     """Compile source directory."""
     if source_dir is None:
         return False
@@ -358,8 +358,6 @@ def compile_pdf(source_dir: Path):
     latexmk = subprocess.Popen(["latexmk", "-pdfdvi", "-interaction=nonstopmode", "-quiet", "-f"], cwd=source_dir,
                                stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
     try:
-        latexmk.wait(timeout=60)
-        return True
+        latexmk.wait(timeout=waiting_time)  # increase time
     except subprocess.TimeoutExpired:
         latexmk.kill()
-        return False

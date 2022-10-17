@@ -42,9 +42,16 @@ def download(url_file):
             start_time = time.time()
             paper = next(arxiv.Search(id_list=[paper_id]).results())
             # download paper
+            if temp.exists():
+                shutil.rmtree(temp)
             temp.mkdir()
             if not paper.download_source(dirpath="temp", filename="temp.tar.gz"):
-                print(f"Could not download {paper_id}")
+                print(f"""Could not download {paper_id}
+                Please try to download an arxiv paper with this code:
+                import arxiv
+                paper = next(arxiv.Search(id_list=["hep-th/0001001v2"]).results())
+                paper.download_source(dirpath="temp", filename="temp.tar.gz")
+                """)
             tar = tarfile.open(temp/"temp.tar.gz", "r:gz")
             tar.extractall(temp)
             tar.close()
@@ -61,8 +68,10 @@ def download(url_file):
             modified_data = color_latex_code(data)
             modified_file = temp / ('vanilla_' + paper_number + '.tex')
             modified_file.write_text(modified_data)
-            if not compile_pdf(temp):
-                print(f"Could not create PDF of {paper_number}")
+            compile_pdf(modified_file, waiting_time=120)
+            if not modified_file.with_suffix(".pdf").exists():
+                print(f"""Could not create PDF of {paper_number}. 
+                Try to increase the waiting_time and check the log to identify missing latex packages""")
                 continue
             images = Path("temp/images")
             if images.exists():
