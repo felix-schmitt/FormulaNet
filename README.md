@@ -43,7 +43,7 @@ The file structure should look like this:
     │   │     └── train_coco.json
     │   └── test
     │         ├── img   # empty folder
-    │         └── train_coco.json
+    │         └── test_coco.json
     └── ...
 
 **Install the python environment (recommended Python 3.8)**
