@@ -21,7 +21,45 @@ copyrights reasons, we can only provide the [list](urls.txt) of papers, which mu
 * display formulae with reference number
 * footnote reference number
 
-## Get FormulaNet
+## Get FormulaNet (Docker option recommended)
+
+### Docker option
+**Prerequisites**
+* Docker
+* Clone the repository
+```shell
+    git clone https://github.com/felix-schmitt/FormulaNet.git
+```
+* Get the annotation files with git lfs or [Dropbox](https://www.dropbox.com/sh/9yjb1lkv9dnmdev/AABBH7QFVA888scAu4Rgj1sja?dl=0)
+```shell
+    cd FormulaNet
+    git lfs pull
+```
+The file structure should look like this:
+
+    .
+    ├── ...
+    ├── Dataset
+    │   ├── train
+    │   │     ├── img   # empty folder
+    │   │     └── train_coco.json
+    │   └── test
+    │         ├── img   # empty folder
+    │         └── test_coco.json
+    └── ...
+
+**build dockerfile (amd64 and arm64 supported)**
+```shell
+    docker build -t formulanet --build-arg Platform='amd64' .
+```
+
+**run the container with mounting the FormulaNet Folder**
+```shell
+    docker run -v ~/<path to FormulaNet folder>/Dataset:/FormulaNet/Dataset formulanet
+```
+
+### Classic option
+
 **Prerequisites**
 * Ubuntu 20.04.5 LTS is recommended
 * A LaTeX installation with texlive-full (2019 is recommended) is required
@@ -31,6 +69,7 @@ copyrights reasons, we can only provide the [list](urls.txt) of papers, which mu
 ```
 * Get the annotation files with git lfs or [Dropbox](https://www.dropbox.com/sh/9yjb1lkv9dnmdev/AABBH7QFVA888scAu4Rgj1sja?dl=0)
 ```shell
+    cd FormulaNet
     git lfs pull
 ```
 The file structure should look like this:
@@ -54,7 +93,6 @@ The file structure should look like this:
 ```shell
     python download.py 
 ```
-
 
 ## Baseline Model
 
