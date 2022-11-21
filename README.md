@@ -30,11 +30,8 @@ copyrights reasons, we can only provide the [list](urls.txt) of papers, which mu
 ```shell
     git clone https://github.com/felix-schmitt/FormulaNet.git
 ```
-* Get the annotation files with git lfs or [Dropbox](https://www.dropbox.com/sh/9yjb1lkv9dnmdev/AABBH7QFVA888scAu4Rgj1sja?dl=0)
-```shell
-    cd FormulaNet
-    git lfs pull
-```
+* Get the annotation files via [Dropbox](https://www.dropbox.com/sh/9yjb1lkv9dnmdev/AABBH7QFVA888scAu4Rgj1sja?dl=0)
+
 The file structure should look like this:
 
     .
@@ -67,11 +64,8 @@ The file structure should look like this:
 ```shell
     git clone https://github.com/felix-schmitt/FormulaNet.git
 ```
-* Get the annotation files with git lfs or [Dropbox](https://www.dropbox.com/sh/9yjb1lkv9dnmdev/AABBH7QFVA888scAu4Rgj1sja?dl=0)
-```shell
-    cd FormulaNet
-    git lfs pull
-```
+* Get the annotation files via [Dropbox](https://www.dropbox.com/sh/9yjb1lkv9dnmdev/AABBH7QFVA888scAu4Rgj1sja?dl=0)
+
 The file structure should look like this:
 
     .
